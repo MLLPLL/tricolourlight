@@ -28,9 +28,15 @@ public class TripleColourLightHandler extends ChannelInboundHandlerAdapter{
         System.out.println("The server receive message:" + body);
         
         
-        String message = "TEST,1";
+//        String message = "TEST,1";
+//        ByteBuf resp = Unpooled.copiedBuffer(message.getBytes());
+//        ctx.write(resp); 
+    }
+    
+    public void lightControlCall(int lightNumber){
+        String message = "TEST,"+String.valueOf(lightNumber);
         ByteBuf resp = Unpooled.copiedBuffer(message.getBytes());
-        ctx.write(resp); 
+        channel.writeAndFlush(resp);
     }
 
     @Override
