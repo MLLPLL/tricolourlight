@@ -25,6 +25,7 @@
         <junit>4.12</junit>
         <mockito>1.10.19</mockito>
         <mysql.driver.version>5.1.30</mysql.driver.version>
+        <netty.version>4.1.6.Final</netty.version>
 
         <!-- code quality -->
         <checkStyle.plugin>2.17</checkStyle.plugin>
@@ -117,6 +118,11 @@
 			<version>4.4.1</version>
 		</dependency>
 		
+		<dependency>
+    		<groupId>io.netty</groupId>
+    		<artifactId>netty-all</artifactId>
+    		<version>${netty.version}</version>
+		</dependency>
     </dependencies>
 
     <build>
