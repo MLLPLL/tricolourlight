@@ -32,6 +32,10 @@ public class LightCacheMapImpl implements LightCache{
 		LIGHT_CACHE.put(8, 1);
 	}
 	
+	public static String getLightStatusName(int status){
+		return LIGHT_STATUS_NAMES.get(status);
+	}
+	
 	public static int getLightStatus(int lightNumber){
 		return LIGHT_CACHE.get(lightNumber);
 	}
