@@ -42,4 +42,17 @@ public class NettyConnectorImpl implements SocketConnector{
         }
     }
     
+    public static void main(String[] args) throws Exception {
+        int port = 9000;
+        if (args != null && args.length > 0) {
+            try {
+                port = Integer.valueOf(args[0]);
+            } catch (NumberFormatException e) {
+
+            }
+        }
+        System.out.println("Start Netty Server");
+        new NettyConnectorImpl().bind(port);
+    }
+    
 }
