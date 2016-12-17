@@ -35,6 +35,7 @@ public class TriColourLightResource {
     @Autowired
     private MessageSource messageSource;
 
+
     @GET
     @Path("/allLightInfo")
     @ApiOperation(value = "获取所有三色灯状态",
@@ -93,7 +94,7 @@ public class TriColourLightResource {
                     LocaleContextHolder.getLocale()));
             return Response.status(Response.Status.BAD_REQUEST).entity(restResponse).build();
         }
-//        TripleColourLightHandler.lightControlCall(Integer.valueOf(id));
+        TripleColourLightHandler.lightControlCall(Integer.valueOf(id));
         restResponse.setStatusCode("0");
         restResponse.setMessage(messageSource.getMessage("light.update.successful",null,
                 LocaleContextHolder.getLocale()));
