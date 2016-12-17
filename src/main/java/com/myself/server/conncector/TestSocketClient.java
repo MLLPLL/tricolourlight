@@ -1,6 +1,7 @@
 package com.myself.server.conncector;
 
-import java.io.*;
+import java.io.InputStream;
+import java.io.PrintWriter;
 import java.net.Socket;
 
 public class TestSocketClient {
@@ -15,22 +16,6 @@ public class TestSocketClient {
         new Thread(){
         	public void run(){
                while(true){
-//				   try {
-//					   InputStream is = client.getInputStream();
-//					   BufferedReader br = new BufferedReader(new InputStreamReader(is));
-//					   String mess = br.readLine();
-//					   System.out.print(mess);
-//					   String message = "ALERT,002,3";
-//					   pw.write(message);
-//					   pw.flush();
-//					   this.sleep(10000);
-//				   } catch (IOException e) {
-//					   e.printStackTrace();
-//				   } catch (InterruptedException e) {
-//					   e.printStackTrace();
-//				   }
-
-
 //                	try{
 //                		//System.out.println("3333333333333");
 //	                	this.sleep(5000);                			
@@ -99,7 +84,7 @@ public class TestSocketClient {
         			this.sleep(10000);
         			message = "ALERT,002,3";
         	        pw.write(message);
-        	        pw.flush();
+        	        pw.flush();        			
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

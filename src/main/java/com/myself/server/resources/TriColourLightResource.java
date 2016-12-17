@@ -35,7 +35,6 @@ public class TriColourLightResource {
     @Autowired
     private MessageSource messageSource;
 
-
     @GET
     @Path("/allLightInfo")
     @ApiOperation(value = "获取所有三色灯状态",

@@ -9,6 +9,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import org.springframework.stereotype.Component;
 
+@Component
 public class TripleColourLightHandler extends ChannelInboundHandlerAdapter{
     public static Channel channel = null ; 
 	
@@ -23,7 +24,6 @@ public class TripleColourLightHandler extends ChannelInboundHandlerAdapter{
     public void channelRead(ChannelHandlerContext ctx, Object msg)
             throws Exception {
         System.out.println("server channelRead..");
-        System.out.println(channel);
         ByteBuf buf = (ByteBuf) msg;
         byte[] req = new byte[buf.readableBytes()];
         buf.readBytes(req);
@@ -48,7 +48,7 @@ public class TripleColourLightHandler extends ChannelInboundHandlerAdapter{
     public static void lightControlCall(int lightNumber){
         String message = "TEST,"+String.valueOf(lightNumber);
         ByteBuf resp = Unpooled.copiedBuffer(message.getBytes());
-        System.out.println(channel);
+        System.out.println("lightControlCall Channel id is "+channel.id());
         channel.writeAndFlush(resp);
     }
 
