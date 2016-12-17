@@ -1,0 +1,14 @@
+@charset "utf-8";
+.order_nav ul li{
+  width: 33.33%;
+}
+.h-goods-list .c-goods{
+  padding:0 0;
+}
+.h-goods-list .c-goods{
+  border-bottom: 0
+}
+.h-goods-list .c-goods .bg-pic{
+  width: 50px;
+  height: 50px;
+}

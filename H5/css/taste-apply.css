@@ -1,0 +1,108 @@
+.style {
+    display: none;
+}
+.address{
+	padding: 10px;
+	
+}
+.location-icon{
+	width: 30px;
+	background: url(../images/address.png) no-repeat left center;
+	background-size:20px auto; 
+}
+.address-detail p{
+	margin-bottom: 5px;
+}
+.goto-page{
+	width: 25px;
+	position: relative;
+}
+.address .goto-page::after{
+	position: absolute;
+    content: '';
+    right: 10px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    margin-top: -8px;
+    border-bottom: 6px solid transparent;
+    border-top: 6px solid transparent;
+    border-left: 6px solid #1b374b;
+}
+.question-sheet{
+	padding: 10px;
+	line-height: 30px
+}
+.question-items .question-item .sub-title span{
+	width: 30px
+}
+.question-icon{
+	width: 30px;
+	height: 30px;
+	background: url(../images/question.png) no-repeat left center;
+	background-size:20px auto; 
+}
+.question-items .question-item .age input{
+	width: 40px;
+	margin-right: 10px;
+	padding: 5px;
+	border:1px solid #dfe0e2;
+}
+
+.question-items .question-item .select-item p{
+	display: inline-block;
+	-webkit-border-radius:2px;
+	border-radius: 2px;
+	border:1px solid #dfe0e2;
+	height: 30px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.question-items .question-item .select-item p span{
+	padding: 0 12px;
+}
+.question-items .question-item .gender p span{
+	padding-left: 38px;
+}
+.question-items .question-item .select-item p.on{
+	border:1px solid #e88671;
+	color: #e88671;
+}					
+.question-items .question-item .gender p span#female{
+	background: url(../images/woman-gray.png) no-repeat 13px center;
+	background-size: 20px auto;
+}
+.question-items .question-item .gender p span#male{
+	background: url(../images/man-gray.png) no-repeat 13px center;
+	background-size: 20px auto;
+}
+.question-items .question-item .gender p.on span#female{
+	background: url(../images/woman-red.png) no-repeat 13px center;
+	background-size: 20px auto;
+}
+.question-items .question-item .gender p.on span#male{
+	background: url(../images/man-red.png) no-repeat 13px center;
+	background-size: 20px auto;
+}
+.addEnter {
+    position: relative;
+    width: 15%;
+}
+.addEnter::before,.addEnter::after {
+    top: -0.5rem;
+    width: 35%;
+}
+.addEnter::before, .addEnter::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: .2rem;
+    border-radius: 3px;
+    background-color: #afc1cb;
+    top:-1px;
+    left: 28%;
+}
+.addEnter::after {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}

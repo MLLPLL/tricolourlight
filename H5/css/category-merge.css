@@ -1,0 +1,19 @@
+.scroller{
+	padding-bottom: 80px
+}
+.pullDown, .pullUp{
+	line-height: 28px
+}
+/*.pullUp{
+	margin-bottom: 50px
+}*/
+.floor-product-list ul li.W100{
+  width: 100%;
+}
+.adver-c-goods.c-goods .goods-pic{
+    padding-top: 0;
+}
+.adver-c-goods.c-goods .goods-pic img{
+    position: relative;
+    display: block;
+}

@@ -1,0 +1,47 @@
+.banner{
+	position: relative;
+}
+.banner span.arrow{
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	width: 30px;
+	height: 30px;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	background: rgba(255,255,255,.8);
+}
+
+.banner span.arrow::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    border-top: 2px solid #1b374b;
+    border-right: 2px solid #1b374b;
+    transform: rotate(225deg);
+    position: absolute;
+    right: 6px;
+    top: 8px;
+    -webkit-transform: rotate(225deg);
+}
+.lists{
+	padding: 10px;
+}
+.lists li{
+	width: 100%;
+	margin-bottom: 10px
+}
+.lists li div{
+	width: 100%;
+	overflow: hidden;
+	-webkit-border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.lists li p{
+	padding: 10px 0;
+	line-height: 22px;
+	box-shadow: 0px 2px 4px #f9f9f9;
+ 
+}

@@ -1,0 +1,268 @@
+.b_bottom2{ 
+	border-bottom:.2rem solid #afc1cb;
+}
+.b_bottom5{ 
+	border-bottom:.5rem solid #eef3f5;
+}
+.payment_style li{
+	padding:2rem 0;
+	border-bottom:.1rem solid #eef3f5;
+	position:relative;
+	font-size:1.4rem;
+}
+.payment_style li:after{
+	display:block;
+	 content: '';
+	 height:0;
+	 clear:both;
+	 overflow:hidden;
+}
+.payment_style li .arr_right{
+	display:block;
+    width:0; 
+    height:0; 
+    border-top:6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #afc1cb;
+    position: absolute;
+    top: 50%;
+    right: 0;
+	margin-top:-0.5rem;
+}
+.payment_style li.wei_icon:before {
+    display: inline-block;
+    content: '';
+    float: left;
+    width: 35px;
+    height: 35px;
+    background: url(../img/user_icon/wechat2x.png) no-repeat;
+    background-size: 35px 35px;
+    margin-right: 1rem;
+	margin-top:-0.5rem;
+}
+.payment_style li.zhi_icon:before {
+    display: inline-block;
+    content: '';
+    float: left;
+    width: 35px;
+    height: 35px;
+    background: url(../img/user_icon/alipay2x.png) no-repeat;
+    background-size: 35px 35px;
+     margin-right: 1rem;
+	margin-top:-0.5rem;
+}
+.payment_style li.yin_icon:before {
+    display: inline-block;
+    content: '';
+    float: left;
+    width: 35px;
+    height: 35px;
+    background: url(../img/user_icon/unionpay2x.png) no-repeat;
+    background-size: 35px 35px;
+     margin-right: 1rem;
+	margin-top:-0.5rem;
+}
+.order_s_content{
+	margin:0 auto ;
+}
+.order_s_content .order_tips{
+	text-align:center;
+}
+.order_s_content .order_s_box{
+	border-top:3px solid #afc1cb;
+	border-left:1px solid #f2f2f2;
+	border-right:1px solid #f2f2f2;
+	-webkit-box-shadow:0 4px 10px rgba(242, 242, 242, .5);  
+	-moz-box-shadow:0 4px 10px rgba(242, 242, 242, .5);  
+	box-shadow:0 4px 10px rgba(242, 242, 242, .5);  
+	padding:.5rem;
+	
+}
+.sales_oreder_bg{
+	width:100% ;
+	height:47px;
+	background:url(../img/user_icon/order_arr_dowm.png) 0 0 repeat-x;
+	background-size:10px;
+}
+.order_s_box .sales_oreder_title{
+	padding:.5rem 0 0;
+	position:relative;
+}
+.order_s_box .sales_oreder_title:before{
+	display: inline-block;
+    content: '';
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url(../img/user_icon/number2x.png) no-repeat;
+    background-size: 20px 20px;
+    margin-right: 0.5rem;
+    margin-top: 0rem;
+}
+
+.order_s_box .sales_oreder_title span:nth-child(1){
+	text-align:left;
+	float:left;
+	width:4.5rem;
+}
+.order_s_box .sales_oreder_title .sporderid{
+display:inline;
+background:none;
+}
+.order_s_box .sales_oreder_title span:nth-child(3){
+	position:absolute;
+	right:0;
+	top:50%;
+	margin-top:-1.5rem;
+	color:#1f3b4e;
+	display:inline-block;
+	padding:.3rem 1rem;
+	border:1px solid #afc1cb;
+}
+.order_s_box .sales_oreder_style {
+	padding:1rem 0;
+}
+.order_s_box .sales_oreder_style ul:after,
+.order_s_box .sales_oreder_style:after,
+.sales_oreder_btn_bar:after{
+	display:block;
+	 content: '';
+	 height:0;
+	 clear:both;
+	 overflow:hidden;
+}
+.order_s_box .sales_oreder_style ul {
+	float:left;
+}
+.order_s_box .sales_oreder_style ul li{
+	margin-top:0.5rem;
+}
+.order_s_box .sales_oreder_style .pay_icon{
+	display: inline-block;
+	float: left;
+    width: 20px;
+    height: 20px;
+    background: url(../img/user_icon/money2x.png) no-repeat;
+    background-size: 20px 20px;
+    margin-right: 0.5rem;
+    margin-top: 0rem;
+}
+.order_s_box .sales_oreder_style .sh_icon{
+	display: inline-block;
+	float: left;
+    width: 20px;
+    height: 20px;
+    background: url(../img/user_icon/address2x.png) no-repeat;
+    background-size: 20px 20px;
+    margin-right: 0.5rem;
+    margin-top: 0rem;
+}
+.order_s_box .sales_oreder_style ul li:nth-child(1){
+	margin-top:0;
+}
+.order_s_box .sales_oreder_style ul li:last-child{
+	border-right:none;
+}
+.order_s_box .sales_oreder_style ul li span:nth-child(1),.sales_oreder_style .o_t{
+	width:4.5rem;
+	display:inline-block;
+}
+.order_s_box .sales_oreder_style .oreder_s_adress,.order_s_box .sales_oreder_style .oreder_s_time{
+	margin-left:2rem;
+}
+.sales_oreder_style .o_adress{
+	margin-left:5rem;
+}
+.order_s_box .sales_oreder_style .oreder_s_adress p,.order_s_box .sales_oreder_style .oreder_s_time p{
+display:inline-block;
+}
+.order_s_box .sales_oreder_style .oreder_s_time{
+	
+}
+.sales_oreder_btn_bar{
+	margin:5rem 0 1rem;
+}
+.sales_oreder_btn_bar a{
+	width:45%;
+	display:inline-block;
+	padding:1rem 0;
+	font-size:1.4rem;
+	text-align:center;
+	border-radius:.2rem;
+}
+.sales_oreder_btn_bar a.btn_blue{
+	border:1px solid #afc1cb;
+}
+.sales_oreder_btn_bar a.btn_pay_pink{
+	background:#e88671;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

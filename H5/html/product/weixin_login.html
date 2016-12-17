@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>系统登陆</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="../../css2.0/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="../../css2.0/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../css2.0/plugins/jqgrid/ui.jqgrid.css?0820" rel="stylesheet">
+    <link href="../../css2.0/animate.css" rel="stylesheet">
+    <link href="../../css2.0/style.css?v=4.0.0" rel="stylesheet">
+	<style type="text/css">
+		.mid-icon {
+    	font-size:66px;
+    	color: #18a689;
+		}
+
+    </style>
+</head>
+
+<body class="gray-bg">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>用户注册/登录<small>欢迎登录本站</small></h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-6 b-r">
+                                    <div class="form-group">
+                                        <label>用户名</label>
+                                        <input id="username" type="text" placeholder="请输入用户名" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>密码</label>
+                                        <input id="password" type="password" placeholder="请输入密码" class="form-control">
+                                    </div>
+                                    <div>
+                                       <button onclick="login();" class="btn btn-primary block full-width m-b">登 录</button>
+                                    </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <h4>还不是会员？</h4>
+                                <p>您可以注册一个新账户</p>
+                                <p class="text-center">
+                                    <a href="weixin_register.html"><i class="fa fa-sign-in mid-icon"></i></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+
+    <!-- 全局js -->
+    <script src="../../js2.0/jquery.min.js?v=2.1.4"></script>
+    <script src="../../js2.0/bootstrap.min.js?v=3.3.5"></script>
+
+    <!-- 自定义js -->
+    <script>
+        $(document).ready(function() {
+        	
+        });
+    </script>
+    
+    
+    <!-- jqGrid -->
+    <script src="../../js2.0/plugins/jqgrid/i18n/grid.locale-cn.js?0820"></script>
+    <script src="../../js2.0/plugins/jqgrid/jquery.jqGrid.min.js?0820"></script>
+
+</body>
+
+</html>

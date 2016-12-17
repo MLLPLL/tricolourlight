@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>系统登陆</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link href="../../css2.0/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="../../css2.0/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../css2.0/plugins/jqgrid/ui.jqgrid.css?0820" rel="stylesheet">
+    <link href="../../css2.0/animate.css" rel="stylesheet">
+    <link href="../../css2.0/style.css?v=4.0.0" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/user.css"/>
+
+	<style type="text/css">
+		.mid-icon {
+    	font-size:66px;
+    	color: #18a689;
+		}
+        .circle1 {
+            width: 50px;
+            height: 50px;
+            margin: 20px;
+            background-color: #ed5565;
+            -webkit-border-radius: 100px;
+        }
+        .circle2 {
+            width: 50px;
+            height: 50px;
+            margin: 20px;
+            background-color: #f8ac59;
+            -webkit-border-radius: 100px;
+        }
+        .circle3 {
+            width: 50px;
+            height: 50px;
+            margin: 20px;
+            background-color: #23c6c8;
+            -webkit-border-radius: 100px;
+        }
+        .circle4 {
+            width: 50px;
+            height: 50px;
+            margin: 20px;
+            background-color: #ccc;
+            -webkit-border-radius: 100px;
+        }
+        .btn-br {
+            min-width: 70px;
+            margin: 10px;
+        }
+        .arrow_left {
+            float: left;
+            margin-left: 10px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body class="gray-bg">
+<!--header start-->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title col-sm-4">
+                        <span class='arrow_left' onclick="javascript:history.go(-1);"><</span>
+                        <h5>系统演示&nbsp;&nbsp;&nbsp;<small>三色灯监控</small></h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <a id="led1" class="btn circle1" href="buttons.html#"></a>
+                                <a id="led2" class="btn circle2" href="buttons.html#"></a>
+                                <a id="led3" class="btn circle3" href="buttons.html#"></a>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-danger btn-br" onclick="oper1();"><span id="span1">关闭</span></button>
+                                <button type="button" class="btn btn-warning btn-br" onclick="oper2();"><span id="span2">关闭</span></button>
+                                <button type="button" class="btn btn-info btn-br" onclick="oper3();"><span id="span3">关闭</span></button>
+                            </div>
+                            <div class="col-sm-4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <h5 class="m-b-md">Q1 销量</h5>
+                        <h2 class="text-navy">
+                            <i class="fa fa-play fa-rotate-270"></i> 上升
+                        </h2>
+                        <small>更新时间：12天以前</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <h5>本日访问量</h5>
+                        <h2>198 009</h2>
+                        <div id="sparkline1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <h5>使用率</h5>
+                        <h2>65%</h2>
+                        <div class="progress progress-mini">
+                            <div style="width: 68%;" class="progress-bar"></div>
+                        </div>
+
+                        <div class="m-t-sm small">4:32更新</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <h5>百分比</h5>
+                        <h2>42/20</h2>
+                        <div class="text-center">
+                            <div id="sparkline5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--mini聊天窗口开始-->
+        <div class="small-chat-box fadeInRight animated">
+
+            <div class="heading" draggable="true">
+                <small class="chat-date pull-right">
+                    2011.1.1
+                </small> 当前系统消息
+            </div>
+
+            <div class="content">
+                <div class="left">
+                    <div class="author-name">
+                        XA1号信号灯 <small class="chat-date">10:02</small>
+                    </div>
+                    <div class="chat-message">
+                        系统信号灯异常
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="author-name">
+                        XA2号信号灯 <small class="chat-date">10:02</small>
+                    </div>
+                    <div class="chat-message">
+                        系统信号灯异常
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="author-name">
+                        XA3号信号灯 <small class="chat-date">10:02</small>
+                    </div>
+                    <div class="chat-message">
+                        系统信号灯异常
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="small-chat">
+            <span class="badge badge-warning pull-right">5</span>
+            <a class="open-small-chat">
+                <i class="fa fa-comments"></i>
+            </a>
+        </div>
+        <!--mini聊天窗口结束-->
+
+    <!-- 全局js -->
+    <script src="../../js2.0/jquery.min.js?v=2.1.4"></script>
+    <script src="../../js2.0/bootstrap.min.js?v=3.3.5"></script>
+    <script src="../../js2.0/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="../../js2.0/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="../../js2.0/plugins/layer/layer.min.js"></script>
+    <script src="../../js2.0/hplus.js?v=4.1.0"></script>
+    <script type="text/javascript" src="../../js2.0/contabs.js"></script>
+    <!-- 自定义js -->
+    <script>
+        $(document).ready(function() {
+        	
+        });
+        function oper1(){
+            var led1C = $('#led1').attr("class");
+            if(led1C == "btn circle1"){
+                $('#led1').attr("class","btn circle4");
+                $('#span1').html("打开");
+            }else{
+                $('#led1').attr("class","btn circle1");
+                $('#span1').html("关闭");
+            }
+        }
+        function oper2(){
+            var led2C = $('#led2').attr("class");
+            if(led2C == "btn circle2"){
+                $('#led2').attr("class","btn circle4");
+                $('#span2').html("打开");
+            }else{
+                $('#led2').attr("class","btn circle2");
+                $('#span2').html("关闭");
+            }
+        }
+        function oper3(){
+            var led3C = $('#led3').attr("class");
+            if(led3C == "btn circle3"){
+                $('#led3').attr("class","btn circle4");
+                $('#span3').html("打开");
+            }else{
+                $('#led3').attr("class","btn circle3");
+                $('#span3').html("关闭");
+            }
+        }
+    </script>
+
+        <!-- Sparkline -->
+        <script src="../../js2.0/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+        <!-- Peity -->
+        <script src="../../js2.0/plugins/peity/jquery.peity.min.js"></script>
+
+        <!-- 自定义js -->
+        <script src="../../js2.0/content.js?v=1.0.0"></script>
+
+        <!-- peity demo data -->
+        <script src="../../js2.0/demo/peity-demo.js"></script>
+
+        <script>
+            $(document).ready(function () {
+
+
+                $("#sparkline1").sparkline([34, 43, 43, 35, 44, 32, 44, 52], {
+                    type: 'line',
+                    width: '100%',
+                    height: '60',
+                    lineColor: '#1ab394',
+                    fillColor: "#ffffff"
+                });
+
+                $("#sparkline2").sparkline([24, 43, 43, 55, 44, 62, 44, 72], {
+                    type: 'line',
+                    width: '100%',
+                    height: '60',
+                    lineColor: '#1ab394',
+                    fillColor: "#ffffff"
+                });
+
+                $("#sparkline3").sparkline([74, 43, 23, 55, 54, 32, 24, 12], {
+                    type: 'line',
+                    width: '100%',
+                    height: '60',
+                    lineColor: '#ed5565',
+                    fillColor: "#ffffff"
+                });
+
+                $("#sparkline4").sparkline([24, 43, 33, 55, 64, 72, 44, 22], {
+                    type: 'line',
+                    width: '100%',
+                    height: '60',
+                    lineColor: '#ed5565',
+                    fillColor: "#ffffff"
+                });
+
+                $("#sparkline5").sparkline([1, 4], {
+                    type: 'pie',
+                    height: '140',
+                    sliceColors: ['#1ab394', '#F5F5F5']
+                });
+
+                $("#sparkline6").sparkline([5, 3], {
+                    type: 'pie',
+                    height: '140',
+                    sliceColors: ['#1ab394', '#F5F5F5']
+                });
+
+                $("#sparkline7").sparkline([2, 2], {
+                    type: 'pie',
+                    height: '140',
+                    sliceColors: ['#ed5565', '#F5F5F5']
+                });
+
+                $("#sparkline8").sparkline([2, 3], {
+                    type: 'pie',
+                    height: '140',
+                    sliceColors: ['#ed5565', '#F5F5F5']
+                });
+
+
+            });
+        </script>
+
+
+</body>
+
+</html>

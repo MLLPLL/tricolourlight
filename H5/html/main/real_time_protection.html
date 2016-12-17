@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="author" content="FamousThemes" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title></title>
+
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="../../style.css"  type="text/css" media="screen" />
+    <link href="../../css2.0/style.css?v=4.0.0" rel="stylesheet">
+    <style>
+
+    </style>
+    <!-- jQuery file -->
+    <script src="../../js/jquery.min.js" ></script>
+    <!-- FlexSlider -->
+    <script src="../../js/jquery.flexslider.js" ></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('.images_slider').flexslider({
+                animation: "slide",
+                directionNav: false,
+                controlNav: true,
+                animationLoop: true,
+                animationDuration: 300,
+                slideshow: false
+            });
+        });
+    </script>
+    <!-- Main effects files -->
+    <script src="../../js/effects.js" ></script>
+    <!-- PrettyPhoto -->
+    <script src="../../js/jquery.prettyPhoto.js"  type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="../../prettyphoto/prettyPhoto.css"  type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+    <!-- Hide Mobiles Browser Navigation Bar -->
+    <script type="text/javascript">
+        window.addEventListener("load",function() {
+            // Set a timeout...
+            setTimeout(function(){
+                // Hide the address bar!
+                window.scrollTo(0, 1);
+            }, 0);
+        });
+    </script>
+
+
+</head>
+<body id="page">
+
+<div id="pagecontainer">
+
+    <div id="header" class="black_gradient">
+        <a href="system_main.html" class="back_button black_button">首页</a>
+        <div class="page_title">智能化管理平台</div>
+        <a href="#" id="menu_open" class="black_button">导航</a>
+        <a href="#" id="menu_close" class="black_button">关闭</a>
+        <div class="clear"></div>
+    </div>
+
+    <div id="pages_nav">
+        <div class="icons_nav">
+            <div class="paginated"> <!--Remove this DIV if you want to remove the pagination-->
+                <ul class="slides">
+                    <li>
+                        <a href="about.html"  class="icon"><img src="../../images/icons/icon_about.png"  alt="" title="" border="0" /><span>关于我们</span></a>
+                        <a href="services.html"  class="icon"><img src="../../images/icons/icon_services.png"  alt="" title="" border="0" /><span>服务项目</span></a>
+                        <a href="blog.html"  class="icon"><img src="../../images/icons/icon_blog.png"  alt="" title="" border="0" /><span>新闻中心</span></a>
+                        <a href="portfolio.html"  class="icon"><img src="../../images/icons/icon_portfolio.png"  alt="" title="" border="0" /><span>案例展示</span></a>
+                    </li>
+                    <li>
+                        <a href="photos.html"  class="icon"><img src="../../images/icons/icon_photos.png"  alt="" title="" border="0" /><span>产品展示</span></a>
+                        <a href="videos.html"  class="icon"><img src="../../images/icons/icon_video.png"  alt="" title="" border="0" /><span>视频展示</span></a>
+                        <a href="clients.html"  class="icon"><img src="../../images/icons/icon_clients.png"  alt="" title="" border="0" /><span>成功客户</span></a>
+                        <a href="contact.html"  class="icon"><img src="../../images/icons/icon_contact.png"  alt="" title="" border="0" /><span>联系我们</span></a>
+                    </li>
+                </ul>
+            </div>  <!--Remove this DIV if you want to remove the pagination-->
+        </div>
+    </div>
+
+
+    <div class="content">
+
+        <h1 style="text-align: center">设备监控</h1>
+        <div id="main1" style="width: 300px;height:400px;"></div>
+        <div id="main2" style="width: 300px;height:400px;"></div>
+        <div class="clear"></div>
+    </div>
+
+
+    <div id="footer" class="black_gradient">
+        <a href="system_main.html" class="back_button black_button">首页</a>
+        <div class="page_title">智能化管理平台</div>
+        <a onClick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"  href="javascript:void(0);" id="top" class="black_button">Top</a>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!-- 引入 ECharts 文件 -->
+<script src="../../js/plugins/Echart/echarts.min.js"></script>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main1'));
+    // 指定图表的配置项和数据
+    var option = {
+        title : {
+            text: '当前班次状态',
+            subtext: '2016-12-21 00:00 - 24:00',
+            x:'center',
+            fontFamily:'Arial, Verdana, sans-serif'
+        },
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data:['正常运转','异常','危险']
+        },
+        color:['#1ab394','#f7a54a','#ec4758'],
+        calculable : true,
+        xAxis : [
+            {
+                axisLabel:{interval: 0},
+                type : 'category',
+                data : ['0-4','5-8','9-12','13-16','17-20','21-24']
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value',
+            }
+        ],
+        series : [
+            {
+                name:'正常运转',
+                type:'bar',
+                data:[30, 10, 60, 30, 10, 40]
+            },
+            {
+                name:'异常',
+                type:'bar',
+                data:[10, 20, 0, 10, 20, 10]
+            },
+            {
+                name:'危险',
+                type:'bar',
+                data:[20, 30, 0, 20, 30, 10]
+            }
+        ]
+    };
+
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main2'));
+    // 指定图表的配置项和数据
+    var option = {
+        title : {
+            text: '设备运转状态',
+            subtext: '一区',
+            x:'center',
+            fontFamily:'Arial, Verdana, sans-serif'
+        },
+        color:['#1ab394','#f7a54a','#ec4758'],
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ['正常运转','异常','危险']
+        },
+        series : [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '50%'],
+                data:[
+                    {value:700, name:'正常运转'},
+                    {value:200, name:'异常'},
+                    {value:100, name:'危险'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+
+</body>
+</html>

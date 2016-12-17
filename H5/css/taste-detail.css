@@ -1,0 +1,42 @@
+.style{
+    display: none;
+}
+.lxftime span{
+    font-weight: normal;
+}
+header span,header span:first-of-type{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background: rgba(255,255,255,.8);
+}
+header span::after{
+	position: absolute;
+}
+header span#call-center{
+	right:10px;
+}
+header span.goshare{
+	right:40px;
+}
+header span.goshare::after {
+    content: "";
+    width: 22px;
+    height: 22px;
+    margin-left: 5px;
+    top: 3px;
+    display: inline-block;
+    background: url(../img/icon/sharep.png) no-repeat;
+    background-size: 20px auto;
+}
+header .call-center::after{
+	margin-top: 3px;
+}
+#footer_tg div span.taste-more{
+	width: 30px;
+    background-image: url("../images/taste-icon/eat.png");
+    background-size:22px auto;
+}

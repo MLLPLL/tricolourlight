@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="author" content="FamousThemes" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title></title>
+
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="../../style.css"  type="text/css" media="screen" />
+    <link href="../../css2.0/style.css?v=4.0.0" rel="stylesheet">
+
+    <style>
+        .span_1{
+            font-size:20px;
+            color:rgb(28, 132, 198);
+        }
+        h2{
+            padding: 5px;
+        }
+    </style>
+    <!-- jQuery file -->
+    <script src="../../js/jquery.min.js" ></script>
+    <!-- FlexSlider -->
+    <script src="../../js/jquery.flexslider.js" ></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('.images_slider').flexslider({
+                animation: "slide",
+                directionNav: false,
+                controlNav: true,
+                animationLoop: true,
+                animationDuration: 300,
+                slideshow: false
+            });
+        });
+    </script>
+    <!-- Main effects files -->
+    <script src="../../js/effects.js" ></script>
+    <!-- PrettyPhoto -->
+    <script src="../../js/jquery.prettyPhoto.js"  type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="../../prettyphoto/prettyPhoto.css"  type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+    <!-- Hide Mobiles Browser Navigation Bar -->
+    <script type="text/javascript">
+        window.addEventListener("load",function() {
+            // Set a timeout...
+            setTimeout(function(){
+                // Hide the address bar!
+                window.scrollTo(0, 1);
+            }, 0);
+        });
+    </script>
+
+
+</head>
+<body id="page">
+
+<div id="pagecontainer">
+
+    <div id="header" class="black_gradient">
+        <a href="system_main.html" class="back_button black_button">首页</a>
+        <div class="page_title">智能化管理平台</div>
+        <a href="#" id="menu_open" class="black_button">导航</a>
+        <a href="#" id="menu_close" class="black_button">关闭</a>
+        <div class="clear"></div>
+    </div>
+
+    <div id="pages_nav">
+        <div class="icons_nav">
+            <div class="paginated"> <!--Remove this DIV if you want to remove the pagination-->
+                <ul class="slides">
+                    <li>
+                        <a href="about.html"  class="icon"><img src="../../images/icons/icon_about.png"  alt="" title="" border="0" /><span>关于我们</span></a>
+                        <a href="services.html"  class="icon"><img src="../../images/icons/icon_services.png"  alt="" title="" border="0" /><span>服务项目</span></a>
+                        <a href="blog.html"  class="icon"><img src="../../images/icons/icon_blog.png"  alt="" title="" border="0" /><span>新闻中心</span></a>
+                        <a href="portfolio.html"  class="icon"><img src="../../images/icons/icon_portfolio.png"  alt="" title="" border="0" /><span>案例展示</span></a>
+                    </li>
+                    <li>
+                        <a href="photos.html"  class="icon"><img src="../../images/icons/icon_photos.png"  alt="" title="" border="0" /><span>产品展示</span></a>
+                        <a href="videos.html"  class="icon"><img src="../../images/icons/icon_video.png"  alt="" title="" border="0" /><span>视频展示</span></a>
+                        <a href="clients.html"  class="icon"><img src="../../images/icons/icon_clients.png"  alt="" title="" border="0" /><span>成功客户</span></a>
+                        <a href="contact.html"  class="icon"><img src="../../images/icons/icon_contact.png"  alt="" title="" border="0" /><span>联系我们</span></a>
+                    </li>
+                </ul>
+            </div>  <!--Remove this DIV if you want to remove the pagination-->
+        </div>
+    </div>
+
+
+    <div class="content">
+
+        <h2 style="text-align: left">设备名称：<span  class="span_1">高压电变抗器</span></h2>
+        <h2 style="text-align: left">设备区域：<span  class="span_1">A号楼L20-2</span></h2>
+        <h2 style="text-align: left">设备归属：<span  class="span_1">厂务工程一部</span></h2>
+        <br>
+        <div id="main1" style="width: 90%;height:300px;"></div>
+        <br><br>
+        <div id="main2" style="width: 90%;height:300px;"></div>
+        <div class="clear"></div>
+    </div>
+
+
+    <div id="footer" class="black_gradient">
+        <a href="system_main.html" class="back_button black_button">首页</a>
+        <div class="page_title">智能化管理平台</div>
+        <a onClick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"  href="javascript:void(0);" id="top" class="black_button">Top</a>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!-- 引入 ECharts 文件 -->
+<script src="../../js/plugins/Echart/echarts.min.js"></script>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main1'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        title : {
+            text: '温度监控',
+            subtext: 'From ExcelHome'
+        },
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            },
+            formatter: function (params){
+                return params[0].name + '<br/>'
+                        + params[0].seriesName + ' : ' + params[0].value + '<br/>'
+                        + params[1].seriesName + ' : ' + (params[1].value + params[0].value);
+            }
+        },
+        legend: {
+            selectedMode:false,
+            data:['温度', '温度']
+        },
+        toolbox: {
+            show : true
+        },
+        calculable : true,
+        xAxis : [
+            {
+                type : 'category',
+                data : ['内部水温','外表温度']
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value',
+                boundaryGap: [0, 0.1]
+            }
+        ],
+        series : [
+            {
+                name:'温度',
+                type:'bar',
+                stack: 'sum',
+                barCategoryGap: '50%',
+                itemStyle: {
+                    normal: {
+                        color: 'tomato',
+                        barBorderColor: 'tomato',
+                        barBorderWidth: 6,
+                        barBorderRadius:0,
+                        label : {
+                            show: true, position: 'insideTop'
+                        }
+                    }
+                },
+                data:[30, 11]
+            },
+            {
+                name:'温度',
+                type:'bar',
+                stack: 'sum',
+                itemStyle: {
+                    normal: {
+                        color: '#fff',
+                        barBorderColor: 'tomato',
+                        barBorderWidth: 6,
+                        barBorderRadius:0,
+                        label : {
+                            show: true,
+                            position: 'top',
+                            formatter: function (params) {
+                                for (var i = 0, l = option.xAxis[0].data.length; i < l; i++) {
+                                    if (option.xAxis[0].data[i] == params.name) {
+                                        return option.series[0].data[i] + params.value;
+                                    }
+                                }
+                            },
+                            textStyle: {
+                                color: 'tomato'
+                            }
+                        }
+                    }
+                },
+                data:[12, 12]
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main2'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        title : {
+            text : 'Pressure',
+            subtext : 'dataZoom支持'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter : function (params) {
+                var date = new Date(params.value[0]);
+                data = date.getFullYear() + '-'
+                        + (date.getMonth() + 1) + '-'
+                        + date.getDate() + ' '
+                        + date.getHours() + ':'
+                        + date.getMinutes();
+                return data + '<br/>'
+                        + params.value[1] + ', '
+                        + params.value[2];
+            }
+        },
+        dataZoom: {
+            show: true,
+            start : 70
+        },
+        legend : {
+            data : ['series1']
+        },
+        grid: {
+            y2: 80
+        },
+        xAxis : [
+            {
+                type : 'time',
+                splitNumber:10
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name: 'series1',
+                type: 'line',
+                showAllSymbol: true,
+                symbolSize: function (value){
+                    return Math.round(value[2]/10) + 2;
+                },
+                data: (function () {
+                    var d = [];
+                    var len = 0;
+                    var now = new Date();
+                    var value;
+                    while (len++ < 200) {
+                        d.push([
+                            new Date(2014, 9, 1, 0, len * 10000),
+                            (Math.random()*30).toFixed(2) - 0,
+                            (Math.random()*100).toFixed(2) - 0
+                        ]);
+                    }
+                    return d;
+                })()
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</body>
+</html>

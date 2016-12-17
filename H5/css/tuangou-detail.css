@@ -1,0 +1,325 @@
+﻿/*
+.c-goods-detail{
+	box-shadow: none;
+}
+#banner::before{  
+  padding-top: 78.667%;
+}
+.page-tab{
+	height: 40px;
+	border-bottom: 1px solid #eef3f5;
+}
+.page-tab li{
+	text-align: center;
+	line-height: 40px;
+}
+.page-tab li a span{
+	position: relative;
+	padding: 0 5px;
+	color: #1d394d
+}
+.page-tab li a span i{
+	position: absolute;
+	top: 0;
+	right: 0；
+	height:20px;
+	line-height: 20px;
+	font-size: .1rem;
+	color: #ee9b84;
+}
+.page-tab li a.active span{
+	height: 39px;
+	border-bottom: 2px solid #1e384b;
+}
+.comment-box{
+	padding:15px 20px;
+}
+.comment-box h2{
+	color: #1b374b;
+	line-height: 30px;	
+	padding-left: 30px;
+	background: url(../images/woman-blue.png) no-repeat left center;
+	background-size: 25px auto;
+}
+.share-box {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    bottom: 10px;
+    right: 10px;
+    background: #fff url(../images/share.png) center no-repeat;
+    background-size: 22px;
+    z-index: 99999
+}
+.collect-box {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    bottom: 10px;
+    right: 60px;
+    background: #fff url(../images/like.png) center no-repeat;
+    background-size: 22px;
+    z-index: 99999
+}
+.collected{
+	background: #fff url(../images/liked.png) center no-repeat;
+	 background-size: 22px;
+}*/
+.tuan-label{
+	background: #e88671;
+	padding:0 5px;
+	color: #fff
+}
+.end-time p{
+	background: #eef3f5;
+	border: 1px dashed #afc1cb;
+	padding: 2px 5px;
+}
+.tuan-member{
+	padding: 10px 0;
+	border-bottom: 1px solid #f5f5f5
+}
+.tuan-member-info{
+	position: relative;
+	display: inline;
+	padding: 2px 7px;
+	background: url(../img/tuan/bg-1.jpg) repeat-x bottom;
+}
+.tuan-member-info .bt-line{
+	
+	width: 100%;
+	background: #eef3f5;
+	height: 10px;
+	margin-top: -8px;
+}
+.member-list{
+	padding: 20px 10px;
+}
+.member-list .mem-item{
+	width:50px;
+	margin: 0 4px;
+	position: relative;
+	
+}
+.member-list .mem-item .mem-pic{
+	width:50px;
+	height: 50px;
+	overflow: hidden;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	background: #d8d8d8;
+	line-height: 50px;
+	color: #fff;
+	font-size: 3rem;
+
+}
+.c-d8d8d8{
+	color: #d8d8d8
+}
+.mem-index{
+	position: absolute;
+	left: -4px;
+	top: -4px;
+	width: 16px;
+	height: 16px;
+	line-height: 14px;
+	border-radius: 100%;
+	background: #e88671;
+	font-size: .9rem;
+	color: #fff;
+}
+.tuan-steps{
+	padding: 10px;
+	
+}
+
+.step span{line-height: 50px}
+.tuan-steps .steps-title  p{
+	width: 20px;
+	height: 20px
+}
+.tuan-steps .steps-title  p:first-of-type {
+    background: url(../images/title_left.png) no-repeat center;
+    background-size: 100% auto;
+    margin-right: 10px;
+}
+.tuan-steps .steps-title p:last-of-type {
+    background: url(../images/title_right.png) no-repeat center;
+    background-size: 100% auto;
+    margin-left: 10px;
+}
+
+.tuan-steps .step p {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: #d8d8d8;
+	
+}
+.tuan-steps .step{
+	font-weight: bold;
+}
+.tuan-steps .step div{
+	margin-top: 3px
+}
+.tuan-steps .current{
+	color: #e88671
+}
+
+.tuan-steps  .step p#choose-goods{
+	background: #d8d8d8 url(../images/tuan-icon/buy.png) no-repeat center;
+	background-size: 30px auto
+}
+.tuan-steps  .current p#choose-goods{
+	background: #e88671 url(../images/tuan-icon/buy.png) no-repeat center;
+	background-size: 30px auto
+}
+.tuan-steps  .step p#pay-goods{
+	background: #d8d8d8 url(../images/tuan-icon/pay.png) no-repeat center;
+	background-size: 30px auto
+}
+.tuan-steps  .current p#pay-goods{
+	background: #e88671 url(../images/tuan-icon/pay.png) no-repeat center;
+	background-size: 30px auto
+}
+.tuan-steps  .step p#invite-friends{
+	background: #d8d8d8 url(../images/tuan-icon/friend.png) no-repeat center;
+	background-size: 30px auto
+}
+.tuan-steps  .current p#invite-friends{
+	background: #e88671 url(../images/tuan-icon/friend.png) no-repeat center;
+	background-size: 30px auto
+}
+
+.tuan-steps  .step p#succed{
+	background: #d8d8d8 url(../images/tuan-icon/succed.png) no-repeat center;
+	background-size: 30px auto
+}
+.tuan-steps  .current p#succed{
+	background: #e88671 url(../images/tuan-icon/succed.png) no-repeat center;
+	background-size: 30px auto
+}
+.step{
+	
+	text-align: center;
+}
+.step .arrow{
+	position: relative;
+	width: 20px;
+	height: 50px;
+	display: inline-block;
+}
+.step .arrow::after {
+    content: "";
+    width: 0.7rem;
+    height: 0.7rem;
+    border-top: 2px solid #cdcdcd;
+    border-right: 2px solid #cdcdcd;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 3px;
+    top: 22px;
+    -webkit-transform: rotate(45deg);
+}
+.step .pass::after {
+    
+    border-top: 2px solid #e88671;
+    border-right: 2px solid #e88671;
+    
+}
+#footer_tg{
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	bottom: 0;
+	left: 0;
+	box-shadow: 0px -1px 8px #f3f4f5;
+	text-align: center;
+	background: #fff;
+	z-index: 2
+}
+#footer_tg div span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-size: 20px auto
+}
+#footer_tg div{
+	display: -webkit-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-align: center;
+    box-align: center;
+    -webkit-box-pack: center;
+    box-pack: center;
+    border-left: 1px solid #dfe0e2
+}
+    
+#footer_tg div span.footer-index {
+    background-image: url("../images/tuan-icon/home.png");
+}
+#footer_tg div span.more-tuan{
+	 width: 30px;
+    background-image: url("../images/tuan-icon/tuangou-bottom.png");
+     background-size: 30px auto
+}
+#footer_tg .invite{
+	background: #1b374b;
+	color: #fff;
+	line-height: 50px;
+	font-size: 1.5rem
+}
+#footer_tg .disabled{
+    color: #fff !important;
+    border-color: #a2a2a2 !important;
+    background: #dee0e1 !important;
+      border-left: none;
+}
+#footer_tg .btn-warn{
+    background-color: #afc1cb;
+
+}
+
+
+.standard{
+	width: 80%;
+	margin:0 auto;
+	border:1px solid #fff;
+	border-radius: 30px;
+	-webkit-border-radius:30px;
+	display: block;		
+}
+.standard ul{
+	clear: both;
+	overflow: hidden;
+}
+.standard ul li{
+	width: 33%;
+	float: left;
+	line-height: 1.5rem;
+	text-align: center;
+	box-sizing:border-box;
+	border-right: 1px solid #fff;
+}
+.standard ul li:nth-child(3){
+	border-right: 0;
+}
+.standard ul li p{color: #fff}
+.standard ul li p:first-child{
+	font-size: 1.4rem;
+	font-weight: bold;
+	padding-top: .7rem;
+}
+.standard ul li p:nth-child(2){
+	font-size: 1.2rem;
+	padding-bottom: .7rem
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+	<meta content="telephone=no" name="format-detection"/>
+	<title>注册/登录</title>
+	<meta name="keywords" content="Jerome" />
+	<meta name="description" content="智能化监控" />
+	<link type="text/css" rel="stylesheet" href="../../css/public-v2.css">
+	<script type="text/javascript" src="../../js/base/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../../js/base/TouchSlide.1.1.js"></script>
+	<link rel="stylesheet" href="../../css/user.css"/>
+	<link rel="stylesheet" href="../../css/shoppingCart.css"/>
+	<script type="text/javascript" src="../../js/base/fastclick.js"></script>
+	<script type="text/javascript" src="../../js/base/jquery.toggle-password.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			FastClick.attach(document.body);
+		});
+		$(function(){
+			$('#password').togglePassword({
+				el: '#togglePassword'
+			});
+		});
+		$(function(){
+			$("#togglePassword").click(function(){
+				$(this).toggleClass("password_on");
+			})
+
+		});
+	</script>
+</head>
+<body>
+<!--header start-->
+<header>
+	<div class="user_nav">
+		<span class='arrow' onclick="javascript:history.go(-1);"></span>
+		<ul class="user_tabs">
+			<li class="on" id="1"><a href="javascript:;">登录</a></li>
+			<li class="" id="2"><a href="javascript:;">注册</a></li>
+		</ul>
+	</div>
+</header>
+<!--登录-->
+<div class="user_content" style="height: 100%" >
+	<div class="account_login"><img src="../../images/main/event.png" /></div>
+	<form action="" method="post" id="login_form">
+		<div class="cus_form_list">
+			<ul>
+				<li>
+					<label class="login_user_icon">登录账号</label>
+					<div class="input_text"><input type="text" name="login[username]" placeholder="用户名/手机号" ></div>
+				</li>
+				<li>
+					<label class="login_pass_icon">密码</label>
+					<div class="input_text"><input type="password" name="login[password]" placeholder="登录密码" ></div>
+				</li>
+			</ul>
+			<button type="button" class="login_button" >登录</button>
+			<a href="#" class="login_tips">忘记密码</a>
+		</div>
+	</form>
+</div>
+<!--注册-->
+<div class="user_content" style="display:none; height: 100%">
+	<div class="account_login"><img src="../../images/main/event_1.png" /></div>
+	<form action="" method="post" id="login_form">
+		<div class="cus_form_list">
+			<ul>
+				<li>
+					<label class="res_tel_icon">手机号</label>
+					<div class="input_text">
+						<span class="f14 fb">+86</span>
+						<input type="text" name="login[username]" placeholder="填写您的手机号" class="" style="display:inline-block;padding-left:10px;">
+						<span class="password_style getM">获取验证码</span>
+					</div>
+				</li>
+				<li>
+					<label class="res_sms_icon">验证码</label>
+					<div class="input_text"><input type="password" name="login[password]" placeholder="填写短信中的验证码" class=""></div>
+				</li>
+				<li>
+					<label class="res_pass_icon">密码</label>
+					<div class="input_text">
+						<input id="password" type="password" name="res[password]" placeholder="6-20个字符" class="">
+						<span id="togglePassword" for="togglePassword" class="password_style password_off"></span>
+					</div>
+				</li>
+			</ul>
+			<button type="button" class="res_button">注册</button>
+		</div>
+	</form>
+</div>
+<div class="m_tips_box" id="m_tips_box1" style="display:none;">
+	<div class="">
+		<img src="../../images/login/user_icon/blackpopupicon.png">
+		<p>登录成功</p>
+	</div>
+</div>
+<div class="m_tips_box" id="m_tips_box2" style="display:none;">
+	<div class="">
+		<img src="../../images/login/user_icon/blackpopupicon.png">
+		<p>注册成功</p>
+	</div>
+</div>
+<!--footer-->
+<footer id="footer">
+	<div class="nav-list">
+		<ul id="ul">
+			<li id="footer-activity" class="current">
+				<a href="../product/productShow.html">
+					<span class="footer-activity"></span>
+					<p>登录</p >
+				</a>
+			</li>
+			<li id="index " >
+				<a href="../main/system_main.html">
+					<span class="footer-index"></span>
+					<p>首页</p >
+				</a>
+			</li>
+			<li id="shoppingcartList">
+				<a href="../main/main.html">
+					<span class="footer-callcenter"></span>
+					<p>联系我们</p >
+				</a>
+			</li>
+			<li id="personal">
+				<a href="../login/user_infomanager.html">
+					<span class="footer-personal"></span>
+					<p>个人信息</p >
+				</a>
+			</li>
+		</ul>
+	</div>
+</footer>
+<!--footer end-->
+
+<script>
+	$(document).ready(function(){
+		var x = window.location.hash;
+		if(x){
+			$(x).addClass("on");
+			$(".user_content").hide().eq($(this).index(x)).show();
+		}
+		$(".user_nav .user_tabs li").click(function(){
+			$(".user_nav .user_tabs li").eq($(this).index()).addClass("on").siblings().removeClass('on');
+			$(".user_content").hide().eq($(this).index()).show();
+
+		});
+	});
+	$(".login_button").click(function(){
+		$('#m_tips_box1').show().delay(1000).hide(0);
+	})
+	$(".res_button").click(function(){
+		$('#m_tips_box2').show().delay(1000).hide(0);
+	})
+</script>
+
+<!-- 兼容iOS -->
+<!--
+<script type="text/javascript">
+	$(function() {
+		var isIOS = (/iphone|ipad/gi).test(navigator.appVersion);
+		if (isIOS) {
+			$("input,textarea").focus( function () {
+				$('header').addClass('pos-rel');
+				$('footer').addClass('pos-rel');
+
+			})
+			$("input,textarea").blur( function () {
+				$('header').removeClass('pos-rel');
+				$('footer').removeClass('pos-rel');
+
+			});
+		}
+	});
+</script>
+-->
+</body>
+</html>

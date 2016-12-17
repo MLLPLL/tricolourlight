@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>个人信息管理</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+	<link type="text/css" rel="stylesheet" href="../../css/public-v2.css">
+	<link type="text/css" rel="stylesheet" href="../../css/user.css"/>
+	<script type="text/javascript" src="../../js/base/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../../js/base/TouchSlide.1.1.js"></script>
+	<script type="text/javascript" src="../../js/base/fastclick.js"></script>
+	<script type="text/javascript" src="../../js/base/jquery.toggle-password.js"></script>
+	<style>
+
+	</style>
+<script type="text/javascript">
+	$(function() {
+		FastClick.attach(document.body);
+	});
+</script>
+</head>
+<body>
+	<!--header start-->
+	<header>
+		<div class="user_nav">
+			<span class='arrow' onclick="javascript:history.go(-1);"></span>			
+			<ul class="user_manageUl useinfo_tab">
+				<li class="on" id="1"><a href="javascript:;">个人信息</a></li>
+				<li class="" id="2"><a href="javascript:;">安全中心</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-----------------个人信息----------ac_securityIcon---------->
+	<div class="user_content wd80 pb20" style="display:;">
+		<div class="user_photo_level">
+			<div class="user_header user_managecon">
+				<div class="user_photo_c pre">
+					<div class="user_photo">
+						<img class="my_img" src="../../images/login/user_icon/touxiang.png"/>
+					</div>
+					<div class="user_edit"><img src="../../images/login/user_icon/user_edit.png"/></div>
+				</div>
+			</div>
+		</div>
+		<div class="form1 pt10">
+			<form>
+				<div class="f_list"><label>用户名</label><input type="text" value="Jerome" /></div>
+				<div class="f_list">
+					<label>性别</label>
+					<span class="u_sex">
+						<a href="#" class="u_sex_w on">女</a>
+						<a href="#" class="u_sex_m ">男</a>
+					</span>
+				</div>
+				<div class="f_list"><label>手机号</label><input type="text" value="" placeholder="输入手机号" /></div>
+				<div class="f_list"><label>QQ</label><input  type="text" placeholder="输入QQ号" /></div>
+			</form>
+		</div>
+		<div class="normal_button">保存</div>
+	</div>
+	<!-----------------安全中心-------------------->
+	<div class="user_content wd90" style="display:none;">
+		<div class="tips pt20">建议您开启全部安全装置，以保障账户及资金安全</div>
+		<hr class="hr_b mt20"/>
+		<div class="member_security">
+			<form>
+				<div class="ac_securityitem confirm_icon">
+					<div class="ac_securityTitle">
+						登录密码
+					</div>
+					<div class="ac_securityAction">
+						<a class="u_s_btn modify_btn" href="user_modify_password.html">修改 </a>
+					</div>
+				</div>
+				<div class="ac_securityitem confirm_icon">
+					<div class="ac_securityTitle">
+						<p>手机已验证</p>
+					</div>
+					<div class="ac_securityAction">
+						<a class="u_s_btn modify_btn" href="user_change_mobile1.html">修改 </a>
+					</div>
+				</div>
+				<!-- <div class="ac_securityitem no_confirm_icon">
+					<div class="ac_securityTitle">
+						<p>邮箱未验证</p>
+					</div>
+					<div class="ac_securityAction">
+						<a class="u_s_btn go_modify_btn" href="user_change_email1.html">去验证 </a>
+					</div>
+				</div> -->
+			</form>
+		</div>
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+			var x = window.location.hash;
+			if(x){
+				$(x).addClass("on");
+			 	$(".user_content").hide().eq($(this).index(x)).show();
+			}	
+			 
+
+
+		        $(".user_nav .user_manageUl li").click(function(){
+		        $(".user_nav .user_manageUl li").eq($(this).index()).addClass("on").siblings().removeClass('on');
+				$(".user_content").hide().eq($(this).index()).show();
+		       
+		        });
+				$(".u_sex a").click( function(){  
+					$(this).siblings().removeClass("on");  
+					$(this).addClass("on");  
+					}  
+				)  
+								
+		    });
+	</script>
+	
+	<!-- 兼容iOS -->
+	<!--
+<script type="text/javascript">
+	$(function() {
+		var isIOS = (/iphone|ipad/gi).test(navigator.appVersion);
+		if (isIOS) {
+			$("input,textarea").focus( function () {
+				$('header').addClass('pos-rel');
+				$('footer').addClass('pos-rel');
+				
+			})
+			$("input,textarea").blur( function () {
+				$('header').removeClass('pos-rel');
+				$('footer').removeClass('pos-rel');
+				
+			});
+			
+		}		
+	});
+</script>
+	-->
+</body>
+</html>

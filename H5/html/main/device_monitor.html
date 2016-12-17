@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="author" content="FamousThemes" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title></title>
+
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="../../style.css"  type="text/css" media="screen" />
+    <link href="../../css2.0/style.css?v=4.0.0" rel="stylesheet">
+    <style>
+        .content img.rounded-half{max-width:92%; display: block;
+            -moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; background-color:white; border:1px #d7d7d7 solid; padding:4%;
+        }
+        .btn-green {
+            background-color: limegreen;
+            border-color: limegreen;
+            color: #FFFFFF;
+        }
+        .btn-yellow {
+            background-color: yellow;
+            border-color: yellow;
+            color: #FFFFFF;
+        }
+        .btn-red {
+            background-color: red;
+            border-color: red;
+            color: #FFFFFF;
+        }
+        .shadow_1{
+            margin-bottom: 5px;
+        }
+    </style>
+    <!-- jQuery file -->
+    <script src="../../js/jquery.min.js" ></script>
+    <!-- FlexSlider -->
+    <script src="../../js/jquery.flexslider.js" ></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('.images_slider').flexslider({
+                animation: "slide",
+                directionNav: false,
+                controlNav: true,
+                animationLoop: true,
+                animationDuration: 300,
+                slideshow: false
+            });
+        });
+    </script>
+    <!-- Main effects files -->
+    <script src="../../js/effects.js" ></script>
+    <!-- PrettyPhoto -->
+    <script src="../../js/jquery.prettyPhoto.js"  type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="../../prettyphoto/prettyPhoto.css"  type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+    <!-- Hide Mobiles Browser Navigation Bar -->
+    <script type="text/javascript">
+        window.addEventListener("load",function() {
+            // Set a timeout...
+            setTimeout(function(){
+                // Hide the address bar!
+                window.scrollTo(0, 1);
+            }, 0);
+        });
+    </script>
+</head>
+<body id="page">
+
+<div id="pagecontainer">
+
+    <div id="header" class="black_gradient">
+        <a href="system_main.html" class="back_button black_button">首页</a>
+        <div class="page_title">智能化管理平台</div>
+        <a href="#" id="menu_open" class="black_button">导航</a>
+        <a href="#" id="menu_close" class="black_button">关闭</a>
+        <div class="clear"></div>
+    </div>
+
+    <div id="pages_nav">
+        <div class="icons_nav">
+            <div class="paginated"> <!--Remove this DIV if you want to remove the pagination-->
+                <ul class="slides">
+                    <li>
+                        <a href="about.html"  class="icon"><img src="images/icons/icon_about.png"  alt="" title="" border="0" /><span>关于我们</span></a>
+                        <a href="services.html"  class="icon"><img src="images/icons/icon_services.png"  alt="" title="" border="0" /><span>服务项目</span></a>
+                        <a href="blog.html"  class="icon"><img src="images/icons/icon_blog.png"  alt="" title="" border="0" /><span>新闻中心</span></a>
+                        <a href="portfolio.html"  class="icon"><img src="images/icons/icon_portfolio.png"  alt="" title="" border="0" /><span>案例展示</span></a>
+                    </li>
+                    <li>
+                        <a href="photos.html"  class="icon"><img src="images/icons/icon_photos.png"  alt="" title="" border="0" /><span>产品展示</span></a>
+                        <a href="videos.html"  class="icon"><img src="images/icons/icon_video.png"  alt="" title="" border="0" /><span>视频展示</span></a>
+                        <a href="clients.html"  class="icon"><img src="images/icons/icon_clients.png"  alt="" title="" border="0" /><span>成功客户</span></a>
+                        <a href="contact.html"  class="icon"><img src="images/icons/icon_contact.png"  alt="" title="" border="0" /><span>联系我们</span></a>
+                    </li>
+                </ul>
+            </div>  <!--Remove this DIV if you want to remove the pagination-->
+        </div>
+    </div>
+
+
+    <div class="content">
+
+        <h1 style="text-align: center">设备监控</h1>
+
+        <ul class="porfolio-third">
+            <li style="text-align: center">
+                <button type="button" class="btn btn-outline btn-success">设备一区</button>
+            </li>
+            <li style="text-align: center">
+                <button type="button" class="btn btn-outline btn-success align_center">设备二区</button>
+            </li>
+            <li style="text-align: center" class="right">
+                <button type="button" class="btn btn-outline btn-success align_center">设备三区</button>
+            </li>
+            <br><br><br>
+            <li>
+                <span style="text-align: center">设备A01</span>
+                <img src="../../images/main/jixie.png"  alt="" title="" border="0" class="rounded-half shadow_1" />
+                <span style="text-align: center"><button type="button" class="btn btn-primary">running</button></span>
+            </li>
+            <li>
+                <span style="text-align: center">设备A02</span>
+                <img src="../../images/main/jixie.png"  alt="" title="" border="0" class="rounded-half shadow_1" />
+                <span style="text-align: center"><button type="button" class="btn btn-danger">danger</button></span>
+            </li>
+            <li class="right">
+                <span style="text-align: center">设备A03</span>
+                <img src="../../images/main/jixie.png"  alt="" title="" border="0" class="rounded-half shadow_1" />
+                <span style="text-align: center"><button type="button" class="btn btn-primary">running</button></span>
+            </li>
+            <li>
+                <span style="text-align: center">设备B01</span>
+                <img src="../../images/main/jixie.png"  alt="" title="" border="0" class="rounded-half shadow_1" />
+                <span style="text-align: center"><button type="button" class="btn btn-warning">warning</button></span>
+            </li>
+            <li>
+                <span style="text-align: center">设备B02</span>
+                <img src="../../images/main/jixie.png"  alt="" title="" border="0" class="rounded-half shadow_1" />
+                <span style="text-align: center"><button type="button" class="btn btn-primary">running</button></span>
+            </li>
+            <li class="right">
+                <span style="text-align: center">设备B03</span>
+                <img src="../../images/main/jixie.png"  alt="" title="" border="0" class="rounded-half shadow_1" />
+                <span style="text-align: center"><button type="button" class="btn btn-primary">running</button></span>
+            </li>
+            <li>
+                <span style="text-align: center">设备C01</span>
+                <img src="../../images/main/jixie.png"  alt="" title="" border="0" class="rounded-half shadow_1" />
+                <span style="text-align: center"><button type="button" class="btn btn-primary">running</button></span>
+            </li>
+            <li>
+                <span style="text-align: center">设备C02</span>
+                <img src="../../images/main/jixie.png"  alt="" title="" border="0" class="rounded-half shadow_1" />
+                <span style="text-align: center"><button type="button" class="btn btn-warning">warning</button></span>
+            </li>
+            <li class="right">
+                <span style="text-align: center">设备C03</span>
+                <img src="../../images/main/jixie.png"  alt="" title="" border="0" class="rounded-half shadow_1" />
+                <span style="text-align: center"><button type="button" class="btn btn-primary">running</button></span>
+            </li>
+            <li>
+                <span style="text-align: center">设备D01</span>
+                <img src="../../images/main/jixie.png"  alt="" title="" border="0" class="rounded-half shadow_1" />
+                <span style="text-align: center"><button type="button" class="btn btn-primary">running</button></span>
+            </li>
+            <li>
+                <span style="text-align: center">设备D02</span>
+                <img src="../../images/main/jixie.png"  alt="" title="" border="0" class="rounded-half shadow_1" />
+                <span style="text-align: center"><button type="button" class="btn btn-primary">running</button></span>
+            </li>
+            <li class="right">
+                <span style="text-align: center">设备D03</span>
+                <img src="../../images/main/jixie.png"  alt="" title="" border="0" class="rounded-half shadow_1" />
+                <span style="text-align: center"><button type="button" class="btn btn-primary">running</button></span>
+            </li>
+        </ul>
+
+
+        <div class="clear"></div>
+    </div>
+
+
+    <div id="footer" class="black_gradient">
+        <a href="system_main.html" class="back_button black_button">首页</a>
+        <div class="page_title">智能化管理平台</div>
+        <a onClick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"  href="javascript:void(0);" id="top" class="black_button">Top</a>
+        <div class="clear"></div>
+    </div>
+</div>
+
+</body>
+</html>

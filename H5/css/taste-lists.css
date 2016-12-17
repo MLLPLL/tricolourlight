@@ -1,0 +1,169 @@
+/*.page-content{
+	padding-top: 10px;
+}*/
+/*试吃列表*/
+.taste-list{
+	margin: 10px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	overflow: hidden;
+
+}
+.lxftime span{
+	font-weight: bold
+}
+.date-box{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	background:rgba(255,255,255,.5);
+	padding: 4px;
+}
+.date-box i{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url(../images/time.png);
+    background-size: 20px auto;
+    background-repeat: no-repeat;
+    margin: 0 10px 0 5px;
+}
+.share-box{
+	position: absolute;
+	width: 44px;
+	height: 44px;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	bottom: 10px;
+	right: 10px;
+	background:#fff url(../images/share.png) center no-repeat;
+	background-size: 22px;
+
+}
+.taste-list .c-goods-detail .title{
+	position: relative;
+	line-height: 40px;
+	font-size: 1.5rem;
+}
+.title::after{
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 2px;
+	background: #b0c3cc;
+	bottom: 0;
+	left: 50%;
+	margin-left: -20px;
+}
+.c-goods .goods-pic{
+	width: 100%;
+	overflow: hidden;
+    -webkit-border-top-left-radius:3px;
+    border-top-right-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    padding-top: 0;
+}
+.c-goods .goods-pic img{position: relative;}
+.c-goods-detail{
+	padding: 10px 10px 15px;
+	/*box-shadow: 0px 2px 4px #f9f9f9;*/
+}
+.c-goods-detail button{
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 1.6rem
+}
+.c-goods-detail button.ui-btn-lg{
+	letter-spacing: 5px;
+}
+.c-goods-detail button[disabled]{
+	color: #fff
+}
+.sub-title{
+	padding:0 0 10px;
+
+}
+.price{
+	padding: 10px 0;
+}
+.price p{
+	line-height: 30px;
+	display: inline-block;
+	float: left;
+}
+.more-taste{
+	position: relative;
+	width: 18px;
+	height: 18px;
+	border-radius: 100%;
+	background: #b0c3cc;
+	margin: 0 auto	
+}
+.more-taste::before{
+	content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(135deg);
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    -webkit-transform: rotate(135deg);
+
+}
+#more-taste{
+	position: absolute;
+	bottom: 0;
+	left: 0;width: 100%
+}
+.scroller{
+	padding-bottom: 100px
+}
+.loadmoreWrapper{
+	margin-bottom: 30px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.pullUp{
+	line-height: 25px;
+}
+/*团购列表*/
+.scroll-box,.scroll{
+	background: none
+}
+.scroll-box .scroll  ul li{
+	padding: 10px;
+
+}
+.scroll-box .scroll  ul li .taste-list{
+	padding: 0;
+	background: #fff
+}
+.c-goods .tuangou-icon{
+	position: absolute;
+	top: -3px;
+	left: 10px;
+	width: 65px;
+	height: 80px;
+	padding-top: 5px;
+	background: url(../images/tuan-icon.png) no-repeat left top;
+	background-size: 100% auto;
+	color: #fff
+}
+.c-goods .tuangou-icon p{
+	line-height: 22px;
+}
+.ui-btn-lg{
+	font-size: 1.4rem
+}
+.btn-group .ui-btn-m-nbg{
+	width: 48%;
+	font-size: 1.4rem
+}
+
+.taste-list.tuan{
+	margin: 0
+}

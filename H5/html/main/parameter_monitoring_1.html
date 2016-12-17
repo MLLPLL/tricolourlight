@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="author" content="FamousThemes" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title></title>
+
+    <!-- Main CSS file -->
+    <link href="../../css2.0/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="../../css2.0/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css"  type="text/css" media="screen" />
+    <link href="../../css2.0/style.css?v=4.0.0" rel="stylesheet">
+    <link href="../../css2.0/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/user.css"/>
+
+    <style>
+        .span_1{
+            font-size:17px;
+            color:rgb(28, 132, 198);
+        }
+        h2{
+            padding: 5px;
+        }
+    </style>
+    <style type="text/css">
+        .mid-icon {
+            font-size:66px;
+            color: #18a689;
+        }
+        .circle1 {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: #ed5565;
+            -webkit-border-radius: 100px;
+        }
+        .circle2 {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: #f8ac59;
+            -webkit-border-radius: 100px;
+        }
+        .circle3 {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: #23c6c8;
+            -webkit-border-radius: 100px;
+        }
+        .circle4 {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: #ccc;
+            -webkit-border-radius: 100px;
+        }
+        .btn-br {
+            min-width: 40px;
+            margin: 10px;
+        }
+        .arrow_left {
+            float: left;
+            margin-left: 10px;
+            margin-right: 20px;
+        }
+    </style>
+    <!-- jQuery file -->
+    <script src="../../js/jquery.min.js" ></script>
+    <!-- FlexSlider -->
+    <script src="../../js/jquery.flexslider.js" ></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('.images_slider').flexslider({
+                animation: "slide",
+                directionNav: false,
+                controlNav: true,
+                animationLoop: true,
+                animationDuration: 300,
+                slideshow: false
+            });
+        });
+    </script>
+    <!-- Main effects files -->
+    <script src="../../js/effects.js" ></script>
+    <!-- PrettyPhoto -->
+    <script src="../../js/jquery.prettyPhoto.js"  type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="../../prettyphoto/prettyPhoto.css"  type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+    <!-- Hide Mobiles Browser Navigation Bar -->
+    <script type="text/javascript">
+        window.addEventListener("load",function() {
+            // Set a timeout...
+            setTimeout(function(){
+                // Hide the address bar!
+                window.scrollTo(0, 1);
+            }, 0);
+        });
+    </script>
+
+
+</head>
+<body id="page">
+
+<div id="pagecontainer">
+
+    <div id="header" class="black_gradient">
+        <a href="system_main.html" class="back_button black_button">首页</a>
+        <div class="page_title">智能化管理平台</div>
+        <a href="#" id="menu_open" class="black_button">导航</a>
+        <a href="#" id="menu_close" class="black_button">关闭</a>
+        <div class="clear"></div>
+    </div>
+
+    <div id="pages_nav">
+        <div class="icons_nav">
+            <div class="paginated"> <!--Remove this DIV if you want to remove the pagination-->
+                <ul class="slides">
+                    <li>
+                        <a href="about.html"  class="icon"><img src="../../images/icons/icon_about.png"  alt="" title="" border="0" /><span>关于我们</span></a>
+                        <a href="services.html"  class="icon"><img src="../../images/icons/icon_services.png"  alt="" title="" border="0" /><span>服务项目</span></a>
+                        <a href="blog.html"  class="icon"><img src="../../images/icons/icon_blog.png"  alt="" title="" border="0" /><span>新闻中心</span></a>
+                        <a href="portfolio.html"  class="icon"><img src="../../images/icons/icon_portfolio.png"  alt="" title="" border="0" /><span>案例展示</span></a>
+                    </li>
+                </ul>
+            </div>  <!--Remove this DIV if you want to remove the pagination-->
+        </div>
+    </div>
+
+    <div class="content">
+
+        <h2 style="text-align: left">设备名称：<span  class="span_1">高压电变抗器</span></h2>
+        <h2 style="text-align: left">设备区域：<span  class="span_1">A号楼L20-2</span></h2>
+        <h2 style="text-align: left">设备归属：<span  class="span_1">厂务工程一部</span></h2>
+        <br>
+        <div class="row">
+            <div class="col-sm-12">
+                <a id="led1" class="btn circle1" href="buttons.html#"></a>
+                <a id="led2" class="btn circle2" href="buttons.html#"></a>
+                <a id="led3" class="btn circle3" href="buttons.html#"></a>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-danger btn-br" onclick="oper1();"><span id="span1">关闭</span></button>
+                <button type="button" class="btn btn-warning btn-br" onclick="oper2();"><span id="span2">关闭</span></button>
+                <button type="button" class="btn btn-info btn-br" onclick="oper3();"><span id="span3">关闭</span></button>
+            </div>
+            <div class="col-sm-4">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <h5 class="m-b-md">Q1</h5>
+                        <h2 class="text-navy">
+                            <i class="fa fa-play fa-rotate-270"></i> 上升
+                        </h2>
+                        <small>更新时间：12天以前</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <h5>使用率</h5>
+                        <h2>65%</h2>
+                        <div class="progress progress-mini">
+                            <div style="width: 68%;" class="progress-bar"></div>
+                        </div>
+
+                        <div class="m-t-sm small">4:32更新</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="clear"></div>
+    </div>
+
+<!--mini聊天窗口开始-->
+<div class="small-chat-box fadeInRight animated">
+
+    <div class="heading" draggable="true">
+        <small class="chat-date pull-right">
+            2011.1.1
+        </small> 当前系统消息
+    </div>
+
+    <div class="content">
+        <div class="left">
+            <div class="author-name">
+                XA1号信号灯 <small class="chat-date">10:02</small>
+            </div>
+            <div class="chat-message">
+                系统信号灯异常
+            </div>
+        </div>
+        <div class="left">
+            <div class="author-name">
+                XA2号信号灯 <small class="chat-date">10:02</small>
+            </div>
+            <div class="chat-message">
+                系统信号灯异常
+            </div>
+        </div>
+        <div class="left">
+            <div class="author-name">
+                XA3号信号灯 <small class="chat-date">10:02</small>
+            </div>
+            <div class="chat-message">
+                系统信号灯异常
+            </div>
+        </div>
+    </div>
+</div>
+<div id="small-chat">
+    <span class="badge badge-warning pull-right">5</span>
+    <a class="open-small-chat">
+        <i class="fa fa-comments"></i>
+    </a>
+</div>
+<!--mini聊天窗口结束-->
+
+    <div id="footer" class="black_gradient">
+        <a href="system_main.html" class="back_button black_button">首页</a>
+        <div class="page_title">智能化管理平台</div>
+        <a onClick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"  href="javascript:void(0);" id="top" class="black_button">Top</a>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+<!-- 全局js -->
+<script src="../../js2.0/jquery.min.js?v=2.1.4"></script>
+<script src="../../js2.0/bootstrap.min.js?v=3.3.5"></script>
+<script src="../../js2.0/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../js2.0/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="../../js2.0/plugins/layer/layer.min.js"></script>
+<script src="../../js2.0/hplus.js?v=4.1.0"></script>
+<script type="text/javascript" src="../../js2.0/contabs.js"></script>
+
+<!-- 自定义js -->
+<script>
+    $(document).ready(function() {
+
+    });
+    function oper1(){
+        var led1C = $('#led1').attr("class");
+        if(led1C == "btn circle1"){
+            $('#led1').attr("class","btn circle4");
+            $('#span1').html("打开");
+        }else{
+            $('#led1').attr("class","btn circle1");
+            $('#span1').html("关闭");
+        }
+    }
+    function oper2(){
+        var led2C = $('#led2').attr("class");
+        if(led2C == "btn circle2"){
+            $('#led2').attr("class","btn circle4");
+            $('#span2').html("打开");
+        }else{
+            $('#led2').attr("class","btn circle2");
+            $('#span2').html("关闭");
+        }
+    }
+    function oper3(){
+        var led3C = $('#led3').attr("class");
+        if(led3C == "btn circle3"){
+            $('#led3').attr("class","btn circle4");
+            $('#span3').html("打开");
+        }else{
+            $('#led3').attr("class","btn circle3");
+            $('#span3').html("关闭");
+        }
+    }
+</script>
+
+</body>
+</html>
