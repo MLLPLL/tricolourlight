@@ -1,5 +1,7 @@
 package com.myself.server.conncector.handler;
 
+import com.myself.server.cache.LightCacheMapImpl;
+
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
@@ -25,8 +27,16 @@ public class TripleColourLightHandler extends ChannelInboundHandlerAdapter{
         buf.readBytes(req);
         String body = new String(req, "UTF-8");
         //service code here
-        System.out.println("The server receive message:" + body);
+        //System.out.println("The server receive message:" + body);
+
+        String[] lightStatus = body.split(",");
         
+       // System.out.println("LightNumber:" + lightStatus[1]);
+        //System.out.println("LightStatus:" + lightStatus[2]);
+        
+        LightCacheMapImpl.setLightStatus(Integer.valueOf(lightStatus[1]).intValue(), Integer.valueOf(lightStatus[2]).intValue());
+        
+        System.out.println("Light:"+lightStatus[1]+" - status is "+LightCacheMapImpl.getLightStatusName(LightCacheMapImpl.getLightStatus(Integer.valueOf(lightStatus[1]).intValue())));
         
 //        String message = "TEST,1";
 //        ByteBuf resp = Unpooled.copiedBuffer(message.getBytes());
