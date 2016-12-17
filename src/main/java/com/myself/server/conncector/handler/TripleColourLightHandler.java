@@ -33,7 +33,7 @@ public class TripleColourLightHandler extends ChannelInboundHandlerAdapter{
 //        ctx.write(resp); 
     }
     
-    public void lightControlCall(int lightNumber){
+    public static void lightControlCall(int lightNumber){
         String message = "TEST,"+String.valueOf(lightNumber);
         ByteBuf resp = Unpooled.copiedBuffer(message.getBytes());
         channel.writeAndFlush(resp);
