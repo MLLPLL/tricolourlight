@@ -1,5 +1,7 @@
 package com.myself.server.cache;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentHashMap;

@@ -1,13 +1,11 @@
 package com.myself.server.resources;
 
-import com.myself.server.entity.Account;
 import com.myself.server.service.AccountService;
 import com.myself.server.vo.*;
 import io.swagger.annotations.*;
 import io.swagger.annotations.ApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -15,6 +13,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
+import java.util.UUID;
 
 
 @Component
@@ -40,10 +39,12 @@ public class AccountResource {
     public Response login(@ApiParam @PathParam("username") String username,
                           @ApiParam @PathParam("password") String password) {
         RestResponse restResponse = new RestResponse();
-        Account account = accountService.login(username,password);
-        if(account != null){
+
+//        Account account = accountService.login(username,password);
+        if("admin".equals(username) && "admin".equals(password)){
             AccountVo accountVo = new AccountVo();
-            BeanUtils.copyProperties(account,accountVo,new String[]{"password"});
+            accountVo.setToken(UUID.randomUUID().toString().replace("-",""));
+//            BeanUtils.copyProperties(account,accountVo,new String[]{"password"});
             restResponse.setStatusCode("0");
             restResponse.setObject(accountVo);
         }else{
@@ -55,23 +56,23 @@ public class AccountResource {
     }
 
 
-    @POST
-    @Path("/add")
-    @ApiOperation(value = "添加用户",
-            response = SampleVo.class)
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "请求成功")
-    })
-    public Response add(AccountVo accountVo) {
-        RestResponse restResponse = new RestResponse();
-        Account account = new Account();
-        BeanUtils.copyProperties(accountVo,account);
-        accountService.saveAccount(account);
-        restResponse.setStatusCode("0");
-        restResponse.setMessage("保存成功");
-
-        return Response.status(Status.OK).entity(restResponse).build();
-    }
+//    @POST
+//    @Path("/add")
+//    @ApiOperation(value = "添加用户",
+//            response = SampleVo.class)
+//    @ApiResponses(value = {
+//            @ApiResponse(code = 200, message = "请求成功")
+//    })
+//    public Response add(AccountVo accountVo) {
+//        RestResponse restResponse = new RestResponse();
+//        Account account = new Account();
+//        BeanUtils.copyProperties(accountVo,account);
+//        accountService.saveAccount(account);
+//        restResponse.setStatusCode("0");
+//        restResponse.setMessage("保存成功");
+//
+//        return Response.status(Status.OK).entity(restResponse).build();
+//    }
 
     /**
      * 测试方法，查询数据库，返回查询对象

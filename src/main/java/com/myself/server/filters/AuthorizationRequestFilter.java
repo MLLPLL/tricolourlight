@@ -32,23 +32,23 @@ public class AuthorizationRequestFilter implements ContainerRequestFilter {
 
     @Override
     public void filter(ContainerRequestContext containerRequestContext) throws IOException {
-        if("OPTIONS".equals(containerRequestContext.getMethod())){
-            return;
-        }
-        ContainerRequest request = (ContainerRequest) containerRequestContext;
-//        LOGGER.info("验证权限,使用" + request.getHeaderString("User-Agent") + ",以" + request.getMethod() + "的方式请求资源:" + request.getPath(true));
-        String token = request.getHeaderString("Authorization_Token");
-        if ("swagger.json".equals(request.getPath(true)) ||
-                request.getPath(true).indexOf("v1/account/login")>-1) {
-            return;
-        }
-        if (!accountService.validateToken(token)) {
-            Map<String,String> result = new HashMap<>();
-            result.put("message","没有权限操作，请先登入");
-            containerRequestContext.abortWith(Response
-                    .status(Response.Status.FORBIDDEN)
-                    .entity(result)
-                    .build());
-        }
+//        if("OPTIONS".equals(containerRequestContext.getMethod())){
+//            return;
+//        }
+//        ContainerRequest request = (ContainerRequest) containerRequestContext;
+////        LOGGER.info("验证权限,使用" + request.getHeaderString("User-Agent") + ",以" + request.getMethod() + "的方式请求资源:" + request.getPath(true));
+//        String token = request.getHeaderString("Authorization_Token");
+//        if ("swagger.json".equals(request.getPath(true)) ||
+//                request.getPath(true).indexOf("v1/account/login")>-1) {
+//            return;
+//        }
+//        if (!accountService.validateToken(token)) {
+//            Map<String,String> result = new HashMap<>();
+//            result.put("message","没有权限操作，请先登入");
+//            containerRequestContext.abortWith(Response
+//                    .status(Response.Status.FORBIDDEN)
+//                    .entity(result)
+//                    .build());
+//        }
     }
 }
