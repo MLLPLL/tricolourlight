@@ -8,6 +8,8 @@ import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
@@ -30,6 +32,9 @@ public class TriColourLightResource {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TriColourLightResource.class);
 
+    @Autowired
+    private MessageSource messageSource;
+
     @GET
     @Path("/allLightInfo")
     @ApiOperation(value = "获取所有三色灯状态",
@@ -38,7 +43,7 @@ public class TriColourLightResource {
             @ApiResponse(code = 200, message = "请求成功")
     })
     public Response getAllLightInfo(){
-        LOGGER.info("请求获取三色灯状态方法");
+        LOGGER.info("call getAllLightInfo");
         RestResponse restResponse = new RestResponse();
         restResponse.setStatusCode("0");
         Map allLightInfo = LightCacheMapImpl.getCurrentAllStatus();
@@ -55,11 +60,12 @@ public class TriColourLightResource {
             @ApiResponse(code = 200, message = "请求成功")
     })
     public Response getLightInfo(@ApiParam @PathParam("id") String id){
-        LOGGER.info("请求获取单个三色灯详细数据");
+        LOGGER.info("call getLightInfo");
         RestResponse restResponse = new RestResponse();
         if(StringUtils.isEmpty(id)){
             restResponse.setStatusCode("1");
-            restResponse.setMessage("参数不能为空");
+            restResponse.setMessage(messageSource.getMessage("rest.request.empty",null,
+                    LocaleContextHolder.getLocale()));
             return Response.status(Response.Status.BAD_REQUEST).entity(restResponse).build();
         }
         restResponse.setStatusCode("0");
@@ -79,16 +85,18 @@ public class TriColourLightResource {
     })
     public Response updateLightInfo(@ApiParam @PathParam("id") String id,
                                  @ApiParam @PathParam("status") String status){
-        LOGGER.info("更新三色灯状态为");
+        LOGGER.info("call updateLightInfo");
         RestResponse restResponse = new RestResponse();
         if(StringUtils.isEmpty(id) || StringUtils.isEmpty(status)){
             restResponse.setStatusCode("1");
-            restResponse.setMessage("参数不能为空");
+            restResponse.setMessage(messageSource.getMessage("rest.request.empty",null,
+                    LocaleContextHolder.getLocale()));
             return Response.status(Response.Status.BAD_REQUEST).entity(restResponse).build();
         }
-        TripleColourLightHandler.lightControlCall(Integer.valueOf(id));
+//        TripleColourLightHandler.lightControlCall(Integer.valueOf(id));
         restResponse.setStatusCode("0");
-        restResponse.setMessage("更新成功");
+        restResponse.setMessage(messageSource.getMessage("light.update.successful",null,
+                LocaleContextHolder.getLocale()));
         return Response.status(Response.Status.OK).entity(restResponse).build();
     }
 }

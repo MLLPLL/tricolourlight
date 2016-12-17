@@ -7,6 +7,8 @@ import io.swagger.annotations.ApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Component;
 
 import javax.ws.rs.*;
@@ -27,6 +29,9 @@ public class AccountResource {
 
     @Autowired
     private AccountService accountService;
+
+    @Autowired
+    private MessageSource messageSource;
 
 
     @GET
@@ -49,7 +54,8 @@ public class AccountResource {
             restResponse.setObject(accountVo);
         }else{
             restResponse.setStatusCode("1");
-            restResponse.setMessage("用户名或者密码错误");
+            restResponse.setMessage(messageSource.getMessage("account.login.error",null,
+                    LocaleContextHolder.getLocale()));
         }
 
         return Response.status(Status.OK).entity(restResponse).build();
